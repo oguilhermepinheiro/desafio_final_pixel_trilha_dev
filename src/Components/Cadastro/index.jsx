@@ -1,8 +1,9 @@
 import "./styles.css";
+import { Link } from "react-router-dom";
 
 export const Cadastro = () => {
   return (
-    <div className="cadastro-content">
+    <div className="initial-pages-content">
       <div className="forms-content">
         <h2>Cadastre-se</h2>
         <p>Crie uma conta gratuitamente</p>
@@ -14,8 +15,12 @@ export const Cadastro = () => {
           id="password"
           placeholder="Senha"
         />
-        <button className="btn">Cadastre-se</button>
-        <a>Entrar</a>
+        <Link className="link-button" to="/">
+          <button className="btn">Cadastre-se</button>
+        </Link>
+        <Link className="link" to="/">
+          Entrar
+        </Link>
       </div>
     </div>
   );

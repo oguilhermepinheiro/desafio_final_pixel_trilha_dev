@@ -1,23 +1,29 @@
 import "./styles.css";
 import logo from "../../assets/logo.svg";
+import { Link } from "react-router-dom";
 
 export const Login = () => {
   return (
-    <div className="login-content">
+    <div className="initial-pages-content">
       <img className="logo-pixel-quizzes" src={logo} alt="PixelQuizzes" />
       <div className="forms-content">
         <h2>Entrar</h2>
-        <input className="login-input" type="text" placeholder="E-mail" />
+        <input type="text" placeholder="E-mail" />
         <input
-          className="password-input"
           type="password"
           name="password"
           id="password"
           placeholder="Password"
         />
-        <a>Esqueceu sua senha?</a>
-        <button className="btn">Entrar</button>
-        <a>Criar uma conta</a>
+        <Link className="link no-margin-top" to="/recuperarsenha">
+          Esqueceu sua senha?
+        </Link>
+        <Link className="link-button" to="/home">
+          <button className="btn">Entrar</button>
+        </Link>
+        <Link className="link" to="/cadastro">
+          Criar uma conta
+        </Link>
       </div>
     </div>
   );
