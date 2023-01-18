@@ -1,0 +1,7 @@
+.quizzes {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin: 48px 0;
+}

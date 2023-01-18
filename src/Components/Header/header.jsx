@@ -1,12 +1,13 @@
-import "./styles.css";
+import "./header.css";
+import P from "prop-types";
 
-export const Header = () => {
+export const Header = ({ user }) => {
   return (
     <header className="header-container">
       <div className="header-content">
         <div>
           <p className="user-p">Olá,</p>
-          <h1 className="user-h1">Juana Antonieta</h1>
+          <h1 className="user-h1">{user.name}</h1>
         </div>
         <div className="search-content">
           <nav className="nav-content">
@@ -25,4 +26,8 @@ export const Header = () => {
       </div>
     </header>
   );
+};
+
+Header.propTypes = {
+  user: P.node.isRequired,
 };

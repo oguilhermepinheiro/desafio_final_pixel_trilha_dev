@@ -2,10 +2,10 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import "./global_styles.css";
-import { Login } from "./Components/Login";
-import { RecuperarSenha } from "./Components/RecuperarSenha";
-import { Cadastro } from "./Components/Cadastro";
-import { Home } from "./Components/Home";
+import { Login } from "./Components/Login/login";
+import { RecuperarSenha } from "./Components/RecuperarSenha/recuperarSenha";
+import { Cadastro } from "./Components/Cadastro/cadastro";
+import { Home } from "./Components/Home/home";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

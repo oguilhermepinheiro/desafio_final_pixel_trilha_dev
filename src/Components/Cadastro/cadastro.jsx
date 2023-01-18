@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./cadastro.css";
 import { Link } from "react-router-dom";
 
 export const Cadastro = () => {
