@@ -11,7 +11,7 @@
   align-items: center;
 }
 
-.nav-content ul {
+.nav-content-ul {
   display: flex;
 }
 
@@ -20,7 +20,7 @@
   align-items: flex-end;
 }
 
-.nav-content ul li {
+.nav-content-ul-item {
   list-style: none;
 }
 
@@ -39,7 +39,7 @@
   line-height: 105%;
 }
 
-.search-content nav ul li {
+.search-content .nav-content-ul-item {
   margin-right: 30px;
   font-weight: 400;
   font-size: 14px;

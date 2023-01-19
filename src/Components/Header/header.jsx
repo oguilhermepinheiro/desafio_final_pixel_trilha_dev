@@ -1,7 +1,8 @@
 import "./header.css";
+import { Menu } from "../Menu/menu";
 import P from "prop-types";
 
-export const Header = ({ user }) => {
+export const Header = ({ user, onChange }) => {
   return (
     <header className="header-container">
       <div className="header-content">
@@ -11,15 +12,18 @@ export const Header = ({ user }) => {
         </div>
         <div className="search-content">
           <nav className="nav-content">
-            <ul>
-              <li>Histórico</li>
-              <li>Temas</li>
+            <ul className="nav-content-ul">
+              <li className="nav-content-ul-item">Histórico</li>
+              <li className="nav-content-ul-item">
+                Temas
+                <Menu></Menu>
+              </li>
             </ul>
           </nav>
           <input
+            onBlur={onChange}
             type="search"
             name="search-quizzes"
-            id=""
             placeholder="Pesquisar quiz"
           />
         </div>
@@ -30,4 +34,5 @@ export const Header = ({ user }) => {
 
 Header.propTypes = {
   user: P.node.isRequired,
+  onChange: P.func.isRequired,
 };

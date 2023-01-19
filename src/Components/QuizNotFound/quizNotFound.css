@@ -1,0 +1,23 @@
+.not-found-quiz {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.not-found-page-h2 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  margin: 32px 0 8px 0;
+}
+
+.not-found-page-p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--cor_InkGray);
+  max-width: 341px;
+  text-align: center;
+}

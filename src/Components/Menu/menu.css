@@ -1,0 +1,28 @@
+.nav-menu {
+  background-color: var(--cor_white);
+  width: 145px;
+  height: 152px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  display: none;
+}
+
+.nav-menu-ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-menu-item {
+  color: #000000;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  list-style: none;
+  padding: 10px 45px 10px 45px;
+  margin: 0;
+  text-align: center;
+}
+
+.border-top {
+  border-top: 1px solid var(--cor_InkGray);
+}

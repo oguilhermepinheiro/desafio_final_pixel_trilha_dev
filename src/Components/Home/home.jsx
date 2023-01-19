@@ -1,12 +1,24 @@
 import "./home.css";
 import { Header } from "../Header/header";
 import { Quizzes } from "../Quizzes/quizzes";
+import { QuizNotFound } from "../QuizNotFound/quizNotFound";
 import { useEffect, useState } from "react";
 import quizzesFetch from "../../axios/config";
 
 export const Home = () => {
   const [quizzes, setQuizzes] = useState([]);
+  const [data, setData] = useState("");
   const [user, setUser] = useState([]);
+
+  const childToParent = (e) => {
+    setData(e.target.value);
+  };
+
+  const lowerData = data.toLowerCase();
+
+  const fetchedQuizzes = quizzes.filter((quiz) =>
+    quiz.title.toLowerCase().includes(lowerData)
+  );
 
   const getQuizzes = async () => {
     try {
@@ -14,7 +26,6 @@ export const Home = () => {
 
       const data = response.data;
       setQuizzes(data);
-      console.log(data);
     } catch (error) {
       console.log(error);
     }
@@ -26,7 +37,6 @@ export const Home = () => {
 
       const data = response.data;
       setUser(data);
-      console.log(data);
     } catch (error) {
       console.log(error);
     }
@@ -42,13 +52,16 @@ export const Home = () => {
 
   return (
     <div className="home-content">
-      {user.length === 0 ? <p>Carregando...</p> : <Header user={user}></Header>}
-
+      {user.length === 0 ? (
+        <p>Carregando...</p>
+      ) : (
+        <Header onChange={childToParent} user={user}></Header>
+      )}
       <div className="quizzes-content">
-        {quizzes.length === 0 ? (
-          <p>Carregando...</p>
+        {fetchedQuizzes.length === 0 ? (
+          <QuizNotFound></QuizNotFound>
         ) : (
-          <Quizzes quizzes={quizzes}></Quizzes>
+          <Quizzes quizzes={fetchedQuizzes}></Quizzes>
         )}
       </div>
     </div>
