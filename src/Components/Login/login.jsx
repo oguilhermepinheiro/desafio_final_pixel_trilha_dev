@@ -2,6 +2,8 @@ import "./login.css";
 import logo from "../../assets/logo.svg";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
 
 export const Login = () => {
   const [form, setForm] = useState({
@@ -25,6 +27,18 @@ export const Login = () => {
     setEmptyProp(emptyProps);
   };
 
+  const password = document.getElementById("password");
+  const [closedEye, setClosedEye] = useState(false);
+  const hidePassword = () => {
+    if (password.type === "password") {
+      password.setAttribute("type", "text");
+      setClosedEye(true);
+    } else {
+      password.setAttribute("type", "password");
+      setClosedEye(false);
+    }
+  };
+
   return (
     <div className="initial-pages-content">
       <img className="logo-pixel-quizzes" src={logo} alt="PixelQuizzes" />
@@ -41,13 +55,18 @@ export const Login = () => {
         ) : (
           ""
         )}
-        <input
-          type="password"
-          name="password"
-          id="password"
-          placeholder="Password"
-          onBlur={(e) => handleChange(e)}
-        />
+        <div className="input-password">
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+            onBlur={(e) => handleChange(e)}
+          />
+          <div onClick={hidePassword} className="eye-icon">
+            {!closedEye ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>}
+          </div>
+        </div>
         {emptyProp && form["password"] === "" ? (
           <span className="emptyProp">Preencha uma senha</span>
         ) : (

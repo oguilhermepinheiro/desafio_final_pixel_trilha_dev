@@ -7,3 +7,15 @@
 .no-margin-top {
   margin-top: 0;
 }
+
+.input-password {
+  width: 100%;
+  position: relative;
+}
+
+.eye-icon {
+ position: absolute;
+ top: 25%;
+ right: 20px;
+ scale: 1.3;
+}
