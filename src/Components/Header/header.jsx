@@ -1,4 +1,5 @@
 import "./header.css";
+import { Link } from "react-router-dom";
 import { Menu } from "../Menu/menu";
 import P from "prop-types";
 
@@ -13,7 +14,9 @@ export const Header = ({ user, onChange }) => {
         <div className="search-content">
           <nav className="nav-content">
             <ul className="nav-content-ul">
-              <li className="nav-content-ul-item">Histórico</li>
+              <Link to="/historico" className="nav-historico">
+                <li className="nav-content-ul-item">Histórico</li>
+              </Link>
               <li className="nav-content-ul-item">
                 Temas
                 <Menu></Menu>

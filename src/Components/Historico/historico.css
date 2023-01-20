@@ -1,0 +1,36 @@
+.historico-header-container {
+  border-bottom: 1px solid #BEBAB3;
+  height: 120px;
+  margin-bottom: 48px;
+}
+
+.historico-header {
+  width: 1144px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.header-content {
+  width: 1144px;
+  margin: 0 auto;
+}
+
+
+.back-to-home {
+  position: relative;
+  left: -72px;
+}
+
+.historico-title {
+  position: relative;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 105%;
+  left: -48px;
+}
+
+.historico-content {
+  width: 1144px;
+  margin: 0 auto;
+}

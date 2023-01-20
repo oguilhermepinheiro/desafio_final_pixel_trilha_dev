@@ -24,6 +24,10 @@
   list-style: none;
 }
 
+.nav-historico {
+ text-decoration: none;
+}
+
 .user-p {
   font-weight: 400;
   font-size: 16px;
