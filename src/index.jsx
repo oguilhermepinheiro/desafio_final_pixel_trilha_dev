@@ -7,6 +7,7 @@ import { RecuperarSenha } from "./Components/RecuperarSenha/recuperarSenha";
 import { Cadastro } from "./Components/Cadastro/cadastro";
 import { Home } from "./Components/Home/home";
 import { Historico } from "./Components/Historico/historico";
+import { QuizPage } from "./Components/QuizPage/quizPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -21,6 +22,7 @@ root.render(
         <Route path="/cadastro" element={<Cadastro></Cadastro>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/historico" element={<Historico></Historico>}></Route>
+        <Route path="/quiz/:id" element={<QuizPage></QuizPage>}></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

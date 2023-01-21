@@ -16,6 +16,10 @@
   color: var(--cor_InkDark);
 }
 
+a {
+  text-decoration: none;
+}
+
 .initial-pages-content {
   display: flex;
   align-items: center;
