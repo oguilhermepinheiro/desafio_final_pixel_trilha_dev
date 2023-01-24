@@ -8,6 +8,7 @@ import { Cadastro } from "./Components/Cadastro/cadastro";
 import { Home } from "./Components/Home/home";
 import { Historico } from "./Components/Historico/historico";
 import { QuizPage } from "./Components/QuizPage/quizPage";
+import { Perguntas } from "./Components/Perguntas/perguntas";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -23,6 +24,7 @@ root.render(
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/historico" element={<Historico></Historico>}></Route>
         <Route path="/quiz/:id" element={<QuizPage></QuizPage>}></Route>
+        <Route path="/perguntas/:id" element={<Perguntas></Perguntas>}></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

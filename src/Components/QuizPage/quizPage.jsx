@@ -1,12 +1,15 @@
 import "./quizPage.css";
 import quizzesFetch from "../../axios/config";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { Back } from "../Back/back";
 
 export const QuizPage = () => {
   const { id } = useParams();
   const [quiz, setQuiz] = useState("");
+  const path = `/perguntas/${id}`;
+  const backPath = `/home`;
 
   useEffect(() => {
     const getQuiz = async () => {
@@ -25,7 +28,7 @@ export const QuizPage = () => {
   return (
     <div>
       <div className="quiz-page-back">
-        <Back path="/home"></Back>
+        <Back path={backPath}></Back>
       </div>
       <div className="quiz-page-content">
         <h1 className="quiz-page-title">{quiz.title}</h1>
@@ -43,7 +46,11 @@ export const QuizPage = () => {
           <h2 className="quiz-page-h2">Quantidade de perguntas</h2>
           <p className="quiz-page-info">{quiz.questions_count}</p>
         </div>
-        <button className="btn btn-quiz-page">Fazer tentativa</button>
+        <div className="btn-quiz-page">
+          <Link to={path}>
+            <button className="btn">Fazer tentativa</button>
+          </Link>
+        </div>
       </div>
     </div>
   );
