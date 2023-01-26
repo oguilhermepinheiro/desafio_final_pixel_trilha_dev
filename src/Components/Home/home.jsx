@@ -10,8 +10,12 @@ export const Home = () => {
   const [data, setData] = useState("");
   const [user, setUser] = useState([]);
 
-  const childToParent = (e) => {
-    setData(e.target.value);
+  const childToParent = (e, temaSearch = false) => {
+    if (!temaSearch) {
+      setData(e.target.value);
+    } else {
+      setData(e);
+    }
   };
 
   const lowerData = data.toLowerCase();

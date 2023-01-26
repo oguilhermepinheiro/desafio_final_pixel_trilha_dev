@@ -24,10 +24,6 @@
   list-style: none;
 }
 
-.nav-historico {
- text-decoration: none;
-}
-
 .user-p {
   font-weight: 400;
   font-size: 16px;
@@ -56,4 +52,28 @@
   padding: 16px;
   border-radius: 12px;
   border: 1px solid var(--cor_InkGray);
+}
+
+.input-search {
+  position: relative;
+}
+
+.nav-content-ul-item-menu {
+  cursor: pointer;
+}
+
+.search-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.show-menu-div {
+  position: relative;
+}
+
+.menu-item {
+  position: absolute;
+  left: -50px;
+  z-index: 1;
 }

@@ -93,5 +93,7 @@ a {
 }
 
 .emptyProp {
-  color: red;
+  width: 100%;
+  color: #EF4949;
+  margin: -10px 0 10px 30px;
 }
