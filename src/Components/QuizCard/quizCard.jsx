@@ -7,6 +7,13 @@ export const QuizCard = ({
   difficulty,
   banner_image,
 }) => {
+  const difficultyElements = document.getElementsByClassName("difficulty");
+  for (let i = 0; i < difficultyElements.length; i++) {
+    if (difficultyElements[i].textContent === "hard") {
+      var elementFound = difficultyElements[i];
+      elementFound.style.backgroundColor = "#EF4949";
+    }
+  }
   return (
     <div className="quiz-card">
       <img className="img-quiz" src={banner_image} alt="" />

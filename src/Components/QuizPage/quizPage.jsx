@@ -25,6 +25,16 @@ export const QuizPage = () => {
     getQuiz();
   }, [id]);
 
+  const difficultyElements = document.getElementsByClassName(
+    "quiz-page-difficulty"
+  );
+  for (let i = 0; i < difficultyElements.length; i++) {
+    if (difficultyElements[i].textContent === "hard") {
+      var elementFound = difficultyElements[i];
+      elementFound.style.backgroundColor = "#EF4949";
+    }
+  }
+
   return (
     <div>
       <div className="quiz-page-back">
