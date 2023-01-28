@@ -1,4 +1,3 @@
-import { useState } from "react";
 import P from "prop-types";
 import "./menu.css";
 
